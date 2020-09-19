@@ -1,5 +1,15 @@
 # aiwa-vite
 > 基于koa自己实现迷你版vite  
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run dev
+```
+
 ## vite原理
 + 开启服务,拦截网络请求
 + vite重度依赖module sciprt的特性
