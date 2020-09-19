@@ -1,18 +1,25 @@
 <template>
+  <home></home>
   <h1>
-    {{count}}
+    {{ count }}
   </h1>
-  <button @click="add">click</button>
+  <div style="text-align: center">
+    <button @click="add" style="background-color:yellow;width: 100px;height:50px;">click</button>
+  </div>
 </template>
 <script>
+import home from "./components/home.vue";
 export default {
-  data(){
+  components: {
+    home
+  },
+  data() {
     return {
-      count:1
+      count: 1
     }
   },
-  methods:{
-    add(){
+  methods: {
+    add() {
       this.count++
     }
   }
