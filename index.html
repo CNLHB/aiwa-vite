@@ -15,10 +15,15 @@
 <body>
     <div id="app">
     </div>
+    <div id="img"></div>
     <script>
         window.onload = function(){
             var image = new Image();
             image.src = '/images/timg.jpg'
+            image.onload = function(){
+                img.appendChild(image)
+            }
+
         }
     </script>
     <script type="module" src="/src/main.js"></script>

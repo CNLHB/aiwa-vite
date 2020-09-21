@@ -25,16 +25,18 @@ app.use(async (ctx, next) => {
             //支持ts等
             parseJs(ctx)
         }else if(url.endsWith('.css')){
-            // 你还可以支持less ，sass ，stylus
+            // 还可以支持less ，sass ，stylus
             parseCss(ctx, url)
         } else if (url.startsWith("/@modules/")) {
-            // 这个模块，不是本地文件，而是node_module里查找
+            // 这个模块，不是本地文件，到node_module里查找
             parseModule(ctx, url)
         } else if (url.indexOf('.vue') > -1) {
             // import xx from 'xx.vue'
             // 1. 单文件组件解析
             compilerSfc(ctx, url, query)
         }
+
+
         await next();
     }
 );

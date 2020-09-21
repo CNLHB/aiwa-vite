@@ -85,6 +85,8 @@ npm run dev
 
   + 拦截.css请求
   + 创建style元素，插入到head中,待优化
+  
++ 支持.vue文件中的CSS(CSS模块化待更新)
 
 + 未完待续~~~
 
